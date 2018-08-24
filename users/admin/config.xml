@@ -3,22 +3,19 @@
   <fullName>Admin User</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAABwHJw9shEM2R5LvKPVR9AAdRFy9OQatM5UwgTUhwBBG3o1kNrbk6spuWBmftOPuHGij9iIql1fZ3ZTE0rmtuOkfrCUgOZu/e8cAbnunIEVED9uaSGeIXYskV6BaJOYGaV/v7BkCoTmxUitn1bsMqbn3yCwu0zsuRejBn/el5fojCM=}</apiToken>
       <tokenStore>
-        <tokenList>
-          <jenkins.security.apitoken.ApiTokenStore_-HashedToken>
-            <uuid>0ddf5034-ed0b-43d8-b6a2-9f617886c5e8</uuid>
-            <name>Legacy Token</name>
-            <value>
-              <version>10</version>
-              <hash>489628503e8fb837c68be73d7c39eb283c81415c94a19ba41cde7879cf25ec28</hash>
-            </value>
-          </jenkins.security.apitoken.ApiTokenStore_-HashedToken>
-        </tokenList>
+        <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
-      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+      </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.63">
       <triggers/>
