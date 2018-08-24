@@ -7,5 +7,6 @@
   <commitMessagePattern>[message]</commitMessagePattern>
   <manualSynchronizationIncludes>
     <include>nodes/**</include>
+    <include>org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml</include>
   </manualSynchronizationIncludes>
 </hudson.plugins.scm__sync__configuration.ScmSyncConfigurationPlugin>
