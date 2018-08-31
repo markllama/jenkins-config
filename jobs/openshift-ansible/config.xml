@@ -87,6 +87,23 @@
           <description>dont do anything if true</description>
           <defaultValue>false</defaultValue>
         </hudson.model.BooleanParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NOTIFY_EMAIL</name>
+          <description>An email address to notify on job completion</description>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>NOTIFY_ON</name>
+          <description>dont do anything if true</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>success</string>
+              <string>failure</string>
+              <string>all</string>
+              <string>none</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
