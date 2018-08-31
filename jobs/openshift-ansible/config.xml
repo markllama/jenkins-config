@@ -90,6 +90,7 @@
         <hudson.model.StringParameterDefinition>
           <name>NOTIFY_EMAIL</name>
           <description>An email address to notify on job completion</description>
+          <defaultValue>mlamouri+jenkins@redhat.com</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
