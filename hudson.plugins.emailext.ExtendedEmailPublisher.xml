@@ -1,6 +1,8 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.63">
+  <defaultSuffix>@redhat.com</defaultSuffix>
   <mailAccount>
+    <smtpHost>smtp.corp.redhat.com</smtpHost>
     <useSsl>false</useSsl>
   </mailAccount>
   <addAccounts/>
@@ -17,10 +19,10 @@ Check console output at $BUILD_URL to view the results.</defaultBody>
     <string>hudson.plugins.emailext.plugins.trigger.FailureTrigger</string>
   </defaultTriggerIds>
   <maxAttachmentSize>-1</maxAttachmentSize>
-  <recipientList></recipientList>
-  <defaultReplyTo></defaultReplyTo>
-  <allowedDomains></allowedDomains>
-  <excludedCommitters></excludedCommitters>
+  <recipientList>mlamouri+jenkins@redhat.com</recipientList>
+  <defaultReplyTo>mlamouri+jenkins@redhat.com</defaultReplyTo>
+  <allowedDomains>redhat.com</allowedDomains>
+  <excludedCommitters>root</excludedCommitters>
   <overrideGlobalSettings>true</overrideGlobalSettings>
   <precedenceBulk>false</precedenceBulk>
   <debugMode>false</debugMode>
