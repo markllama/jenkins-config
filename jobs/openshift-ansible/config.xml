@@ -62,6 +62,18 @@
           </choices>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
+          <name>KRB5_KEYTAB_FILE</name>
+          <description>Name of the keyfile for kerberos access</description>
+          <defaultValue>jenkins.keytab</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>KRB5_PRINCIPAL</name>
+          <description>The name of the kerberos principal to authenticate</description>
+          <defaultValue>jenkins</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>BUILD_VERSION</name>
           <description>OCP Version to build</description>
           <defaultValue>master</defaultValue>
