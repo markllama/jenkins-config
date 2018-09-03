@@ -43,7 +43,7 @@
       <roles>
         <string>authenticated</string>
       </roles>
-      <timestamp>1535917451124</timestamp>
+      <timestamp>1535946261791</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>

@@ -1,10 +1,10 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>2.140</version>
+  <version>2.141</version>
   <installStateName>RUNNING</installStateName>
   <numExecutors>2</numExecutors>
-  <mode>EXCLUSIVE</mode>
+  <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
     <roleMap type="projectRoles"/>
@@ -67,7 +67,6 @@
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>/jenkins/var/workspaces/${ITEM_FULL_NAME}</workspaceDir>
   <buildsDir>/jenkins/var/builds/${ITEM_FULL_NAME}</buildsDir>
-  <systemMessage>Testing how this message is set</systemMessage>
   <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
   <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
