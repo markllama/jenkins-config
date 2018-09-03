@@ -68,7 +68,7 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>KRB5_PRINCIPLE</name>
+          <name>KRB5_PRINCIPAL</name>
           <description>The name of the kerberos principle to authenticate</description>
           <defaultValue>jenkins</defaultValue>
           <trim>false</trim>
