@@ -110,8 +110,8 @@
           <description>dont do anything if true</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>success</string>
               <string>failure</string>
+              <string>success</string>
               <string>all</string>
               <string>none</string>
             </a>
