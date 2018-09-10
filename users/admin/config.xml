@@ -8,14 +8,7 @@
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
-      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
-        <entry>
-          <com.cloudbees.plugins.credentials.domains.Domain>
-            <specifications/>
-          </com.cloudbees.plugins.credentials.domains.Domain>
-          <java.util.concurrent.CopyOnWriteArrayList/>
-        </entry>
-      </domainCredentialsMap>
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.63">
       <triggers/>
@@ -50,7 +43,7 @@
       <roles>
         <string>authenticated</string>
       </roles>
-      <timestamp>1536596389956</timestamp>
+      <timestamp>1536605454255</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>
