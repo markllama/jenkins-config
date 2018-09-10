@@ -1,8 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
-  <disabledAdministrativeMonitors>
-    <string>hudsonHomeIsFull</string>
-  </disabledAdministrativeMonitors>
+  <disabledAdministrativeMonitors/>
   <version>2.141</version>
   <installStateName>RUNNING</installStateName>
   <numExecutors>2</numExecutors>
@@ -96,21 +94,5 @@
     <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
   </crumbIssuer>
   <nodeProperties/>
-  <globalNodeProperties>
-    <hudson.slaves.EnvironmentVariablesNodeProperty>
-      <envVars serialization="custom">
-        <unserializable-parents/>
-        <tree-map>
-          <default>
-            <comparator class="hudson.util.CaseInsensitiveComparator"/>
-          </default>
-          <int>2</int>
-          <string>OIT_PULP_PASSWORD</string>
-          <string>qa</string>
-          <string>OIT_PULP_USERNAME</string>
-          <string>qa</string>
-        </tree-map>
-      </envVars>
-    </hudson.slaves.EnvironmentVariablesNodeProperty>
-  </globalNodeProperties>
+  <globalNodeProperties/>
 </hudson>
