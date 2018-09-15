@@ -3,8 +3,18 @@
   <fullName>Admin User</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
+      <apiToken>{AQAAABAAAABw7/NvoYKAN5lsm7/9XU7wzYCxvnn4kyPYobmEhX/UWHzCGhr1hQxzbgCqjaqZ46mH5XYY/T4ttN7Z4ewBgz25icTDSUnZxWwAT28glgOS6yAtYdnDZpDgFASklaPa9J5ntn0av4bCRv8cYyaX/rm5U/N+va3qnoqOEOapmkQ5Gh4=}</apiToken>
       <tokenStore>
-        <tokenList/>
+        <tokenList>
+          <jenkins.security.apitoken.ApiTokenStore_-HashedToken>
+            <uuid>57d974a3-0b0f-46be-aac5-1f83e9d1212b</uuid>
+            <name>Legacy Token</name>
+            <value>
+              <version>10</version>
+              <hash>489628503e8fb837c68be73d7c39eb283c81415c94a19ba41cde7879cf25ec28</hash>
+            </value>
+          </jenkins.security.apitoken.ApiTokenStore_-HashedToken>
+        </tokenList>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
@@ -43,7 +53,7 @@
       <roles>
         <string>authenticated</string>
       </roles>
-      <timestamp>1536777008452</timestamp>
+      <timestamp>1536968095829</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>
