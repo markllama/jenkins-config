@@ -68,9 +68,14 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
-          <name>RELEASE</name>
-          <description>build local or release</description>
+          <name>MERGE</name>
+          <description>Merge upstream master or release branch</description>
           <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>LOCAL</name>
+          <description>build local or remote (in brew)</description>
+          <defaultValue>true</defaultValue>
         </hudson.model.BooleanParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>SCRATCH</name>
