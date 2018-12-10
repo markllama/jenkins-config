@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson.plugins.git.GitSCM_-DescriptorImpl plugin="git@3.9.1">
   <generation>1</generation>
-  <globalConfigName></globalConfigName>
-  <globalConfigEmail></globalConfigEmail>
-  <createAccountBasedOnEmail>false</createAccountBasedOnEmail>
+  <globalConfigName>Mark Lamourine</globalConfigName>
+  <globalConfigEmail>mlamouri+jenkins@redhat.com</globalConfigEmail>
+  <createAccountBasedOnEmail>true</createAccountBasedOnEmail>
 </hudson.plugins.git.GitSCM_-DescriptorImpl>
