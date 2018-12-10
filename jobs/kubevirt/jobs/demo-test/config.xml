@@ -27,7 +27,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>_tests/demo/Jenkinsfile</scriptPath>
+    <scriptPath>_tests/demos/Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
