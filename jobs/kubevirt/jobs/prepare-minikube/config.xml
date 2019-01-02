@@ -1,5 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job@2.31">
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -26,7 +27,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>_test/demos/Jenkinsfile.minikube</scriptPath>
+    <scriptPath>_tests/demos/Jenkinsfile.minikube</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
