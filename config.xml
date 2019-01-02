@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>2.155</version>
+  <version>2.156</version>
   <installStateName>RUNNING</installStateName>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
@@ -14,9 +14,11 @@
           <permission>hudson.model.View.Delete</permission>
           <permission>hudson.model.Computer.Connect</permission>
           <permission>hudson.model.Run.Delete</permission>
+          <permission>hudson.model.Hudson.UploadPlugins</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
           <permission>hudson.model.Computer.Create</permission>
           <permission>hudson.model.View.Configure</permission>
+          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
           <permission>hudson.model.Computer.Build</permission>
           <permission>hudson.model.Item.Configure</permission>
           <permission>hudson.model.Hudson.Administer</permission>
@@ -25,6 +27,7 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
           <permission>hudson.model.Computer.Delete</permission>
           <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Item.ExtendedRead</permission>
           <permission>hudson.scm.SCM.Tag</permission>
           <permission>hudson.model.Item.Move</permission>
           <permission>hudson.model.Item.Discover</permission>
@@ -35,27 +38,22 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
           <permission>hudson.model.Computer.Provision</permission>
           <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Item.WipeOut</permission>
           <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
           <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Computer.ExtendedRead</permission>
           <permission>hudson.model.Item.Delete</permission>
           <permission>hudson.model.Computer.Configure</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
           <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>hudson.model.Run.Artifacts</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseItem</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseOwn</permission>
           <permission>hudson.model.Run.Update</permission>
         </permissions>
         <assignedSIDs>
           <sid>admin</sid>
-        </assignedSIDs>
-      </role>
-      <role name="guest" pattern=".*">
-        <permissions>
-          <permission>hudson.model.Hudson.Read</permission>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
-          <permission>hudson.model.View.Read</permission>
-        </permissions>
-        <assignedSIDs>
-          <sid>anonymous</sid>
         </assignedSIDs>
       </role>
     </roleMap>
