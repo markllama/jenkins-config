@@ -65,7 +65,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MINIKUBE_VERSION</name>
           <description>What version of minikube to use (no v prefix!)</description>
-          <defaultValue>0.32.0</defaultValue>
+          <defaultValue>0.31.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
