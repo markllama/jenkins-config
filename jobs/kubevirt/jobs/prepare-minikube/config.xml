@@ -68,6 +68,11 @@
           <defaultValue>0.31.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>KVM_DRIVER_VERSION</name>
+          <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>PERSIST</name>
           <description>leave the minikube service in place</description>
