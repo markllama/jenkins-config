@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>2.141</version>
+  <version>2.161</version>
   <installStateName>RUNNING</installStateName>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
@@ -14,9 +14,11 @@
           <permission>hudson.model.View.Delete</permission>
           <permission>hudson.model.Computer.Connect</permission>
           <permission>hudson.model.Run.Delete</permission>
+          <permission>hudson.model.Hudson.UploadPlugins</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
           <permission>hudson.model.Computer.Create</permission>
           <permission>hudson.model.View.Configure</permission>
+          <permission>hudson.model.Hudson.ConfigureUpdateCenter</permission>
           <permission>hudson.model.Computer.Build</permission>
           <permission>hudson.model.Item.Configure</permission>
           <permission>hudson.model.Hudson.Administer</permission>
@@ -25,6 +27,7 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
           <permission>hudson.model.Computer.Delete</permission>
           <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Item.ExtendedRead</permission>
           <permission>hudson.scm.SCM.Tag</permission>
           <permission>hudson.model.Item.Move</permission>
           <permission>hudson.model.Item.Discover</permission>
@@ -35,27 +38,22 @@
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
           <permission>hudson.model.Computer.Provision</permission>
           <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.Item.WipeOut</permission>
           <permission>hudson.model.View.Read</permission>
+          <permission>hudson.model.Hudson.RunScripts</permission>
           <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Computer.ExtendedRead</permission>
           <permission>hudson.model.Item.Delete</permission>
           <permission>hudson.model.Computer.Configure</permission>
           <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
           <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>hudson.model.Run.Artifacts</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseItem</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseOwn</permission>
           <permission>hudson.model.Run.Update</permission>
         </permissions>
         <assignedSIDs>
           <sid>admin</sid>
-        </assignedSIDs>
-      </role>
-      <role name="guest" pattern=".*">
-        <permissions>
-          <permission>hudson.model.Hudson.Read</permission>
-          <permission>hudson.model.Item.Read</permission>
-          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
-          <permission>hudson.model.View.Read</permission>
-        </permissions>
-        <assignedSIDs>
-          <sid>anonymous</sid>
         </assignedSIDs>
       </role>
     </roleMap>
@@ -73,7 +71,22 @@
   <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
-  <clouds/>
+  <clouds>
+    <hudson.plugins.ec2.EC2Cloud plugin="ec2@1.42">
+      <name>ec2-aws-sysdeseng</name>
+      <useInstanceProfileForCredentials>false</useInstanceProfileForCredentials>
+      <roleArn></roleArn>
+      <roleSessionName></roleSessionName>
+      <credentialsId>aws-mlamouri</credentialsId>
+      <privateKey>
+        <privateKey>{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}</privateKey>
+      </privateKey>
+      <instanceCap>2147483647</instanceCap>
+      <templates class="empty-list"/>
+      <region>us-east-1</region>
+      <noDelayProvisioning>false</noDelayProvisioning>
+    </hudson.plugins.ec2.EC2Cloud>
+  </clouds>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
   <views>

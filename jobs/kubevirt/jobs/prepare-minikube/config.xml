@@ -1,0 +1,113 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.31">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.20">
+      <jobPropertyDescriptors>
+        <string>org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty</string>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>jenkins.model.BuildDiscarderProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>5</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>TARGET_NODE</name>
+          <description>Jenkins agent node</description>
+          <defaultValue>kubevirt</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>GITHUB_OWNER</name>
+          <description>Github ownerfor repos</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>markllama</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>SSH_KEY_ID</name>
+          <description>SSH credential id to use</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>markllama</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>MINIKUBE_VERSION</name>
+          <description>What version of minikube to use (no v prefix!)</description>
+          <defaultValue>0.33.1</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>VIRT_DRIVER</name>
+          <description>Which virtualization driver to use</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>kvm2</string>
+              <string>kvm</string>
+              <string>virtualbox</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>VIRT_DRIVER_VERSION</name>
+          <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
+          <defaultValue>default</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PERSIST</name>
+          <description>leave the minikube service in place</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>DEBUG</name>
+          <description>ask commands to print details</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.62">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>git@github.com:markllama/kubevirt.github.io.git</url>
+          <credentialsId>markllama-oauth</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/kubevirt-jenkins</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>_tests/demos/prep-minikube.Jenkinsfile</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
