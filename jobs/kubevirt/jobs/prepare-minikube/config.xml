@@ -71,6 +71,7 @@
         <hudson.model.StringParameterDefinition>
           <name>KVM_DRIVER_VERSION</name>
           <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
+          <defaultValue>default</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
