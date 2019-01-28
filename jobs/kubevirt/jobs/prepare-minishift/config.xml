@@ -63,7 +63,7 @@
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MINISHIFT_VERSION</name>
-          <description>What version of minikube to use (no v prefix!)</description>
+          <description>What version of minishift to use (no v prefix!)</description>
           <defaultValue>1.28.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
@@ -75,7 +75,7 @@
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>PERSIST</name>
-          <description>leave the minikube service in place</description>
+          <description>leave the minishift service in place</description>
           <defaultValue>false</defaultValue>
         </hudson.model.BooleanParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
@@ -87,8 +87,8 @@
     </hudson.model.ParametersDefinitionProperty>
     <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
   </properties>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.61">
-    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.62">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.2">
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
