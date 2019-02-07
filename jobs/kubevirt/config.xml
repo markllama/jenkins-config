@@ -13,18 +13,7 @@
               <credentialsId>markllama-oauth</credentialsId>
               <repoOwner>markllama</repoOwner>
               <repository>kubevirt.github.io</repository>
-              <traits>
-                <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-                  <strategyId>1</strategyId>
-                </org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-                <org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-                  <strategyId>1</strategyId>
-                </org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-                <org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
-                  <strategyId>1</strategyId>
-                  <trust class="org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustPermission"/>
-                </org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
-              </traits>
+              <traits/>
             </scm>
           </retriever>
           <defaultVersion>scriptlets</defaultVersion>
