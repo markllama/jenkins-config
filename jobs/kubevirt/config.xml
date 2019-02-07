@@ -27,7 +27,7 @@
               </traits>
             </scm>
           </retriever>
-          <defaultVersion>master</defaultVersion>
+          <defaultVersion>scriptlets</defaultVersion>
           <implicit>true</implicit>
           <allowVersionOverride>true</allowVersionOverride>
           <includeInChangesets>true</includeInChangesets>
