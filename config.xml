@@ -54,9 +54,13 @@
           <permission>hudson.model.Item.Discover</permission>
           <permission>hudson.model.View.Read</permission>
         </permissions>
-        <assignedSIDs/>
+        <assignedSIDs>
+          <sid>anonymous</sid>
+        </assignedSIDs>
       </role>
     </roleMap>
+    <roleMap type="projectRoles"/>
+    <roleMap type="slaveRoles"/>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>false</disableSignup>
