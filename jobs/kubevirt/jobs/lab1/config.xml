@@ -32,20 +32,10 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>OWNER_NUMBER</name>
-          <description>AWS Owner number</description>
+          <name>KUBEVIRT_HOSTNAME</name>
+          <description>Hostname of the kubevirt server</description>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>KEYPAIR_NAME</name>
-          <description>AWS SSH Keypair Name</description>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.BooleanParameterDefinition>
-          <name>PERSIST_INSTANCE</name>
-          <description>Do not tear down instance after run</description>
-          <defaultValue>false</defaultValue>
-        </hudson.model.BooleanParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
