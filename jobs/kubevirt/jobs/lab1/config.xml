@@ -41,6 +41,11 @@
           <description>AWS SSH Keypair Name</description>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PERSIST_INSTANCE</name>
+          <description>Do not tear down instance after run</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
