@@ -39,7 +39,7 @@
         <hudson.model.StringParameterDefinition>
           <name>AWS_REGION</name>
           <description>AWS region</description>
-          <defaultValue>us-east1</defaultValue>
+          <defaultValue>us-east-1</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
