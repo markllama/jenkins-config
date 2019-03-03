@@ -37,8 +37,33 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>KEYPAIR_NAME</name>
+          <name>AWS_REGION</name>
+          <description>AWS region</description>
+          <defaultValue>us-east-1</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>AWS_CREDENTIALS</name>
+          <description>AWS access credentials</description>
+          <defaultValue>kubevirt-demos</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_KEYPAIR_NAME</name>
           <description>AWS SSH Keypair Name</description>
+          <defaultValue>kubevirt-demos</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_SSH_PRIVATE_KEY</name>
+          <description>Name of the SSH credentials for AWS instance</description>
+          <defaultValue>kubevirt-ssh-key</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_SSH_USERNAME</name>
+          <description>The username for SSH to the instance</description>
+          <defaultValue>centos</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
