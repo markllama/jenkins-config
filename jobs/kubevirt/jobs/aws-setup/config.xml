@@ -51,13 +51,13 @@
         <hudson.model.StringParameterDefinition>
           <name>INSTANCE_KEYPAIR_NAME</name>
           <description>AWS SSH Keypair Name</description>
-          <defaultValue>kubevirt-demos</defaultValue>
+          <defaultValue>kubevirt-demos-ssh-name</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>INSTANCE_SSH_PRIVATE_KEY</name>
           <description>Name of the SSH credentials for AWS instance</description>
-          <defaultValue>kubevirt-ssh-key</defaultValue>
+          <defaultValue>kubevirt-demos-ssh</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
