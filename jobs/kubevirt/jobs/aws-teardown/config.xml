@@ -32,7 +32,19 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>INSTANCE_ID</name>
+          <name>AWS_REGION</name>
+          <description>AWS region</description>
+          <defaultValue>us-east-1</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>AWS_CREDENTIALS</name>
+          <description>AWS access credentials</description>
+          <defaultValue>kubevirt-demos</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>AWS_INSTANCE_ID</name>
           <description>AWS Instance ID to remove</description>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
