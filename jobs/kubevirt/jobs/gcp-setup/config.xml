@@ -27,7 +27,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>_tests/mages/gcp-setup.Jenkinsfile</scriptPath>
+    <scriptPath>_tests/images/gcp-setup.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
