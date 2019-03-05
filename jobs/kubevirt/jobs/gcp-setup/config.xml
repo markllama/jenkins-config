@@ -32,6 +32,12 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
+          <name>GCP_PROJECT</name>
+          <description>The project ID for the GCP service account</description>
+          <defaultValue>cnvlab-209908</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>GCP_SERVICE_ACCOUNT</name>
           <description>The account ID (email) of the GCP service account</description>
           <defaultValue>kubevirt-io-testing@cnvlab-209908.iam.gserviceaccount.com</defaultValue>
