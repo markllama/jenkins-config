@@ -28,7 +28,7 @@
         <hudson.model.StringParameterDefinition>
           <name>TARGET_NODE</name>
           <description>Jenkins agent node</description>
-          <defaultValue>awscli</defaultValue>
+          <defaultValue>gcloud</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -56,13 +56,19 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>INSTANCE_USERNAME</name>
+          <name>GCP_INSTANCE_NAME</name>
+          <description>The username to log into the VM instance</description>
+          <defaultValue>kubevirt-demo-test</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_INSTANCE_USERNAME</name>
           <description>The username to log into the VM instance</description>
           <defaultValue>centos</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>INSTANCE_PUBLIC_KEY_NAME</name>
+          <name>GCP_INSTANCE_PUBLIC_KEY_NAME</name>
           <description>The name of the Jenkins credentials containing the instance public key string</description>
           <defaultValue>centos-public-key</defaultValue>
           <trim>false</trim>
