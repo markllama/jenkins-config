@@ -73,6 +73,12 @@
           <defaultValue>centos-public-key</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_INSTANCE_PRIVATE_KEY_NAME</name>
+          <description>The name of the Jenkins credentials containing the instance public key string</description>
+          <defaultValue>centos-private-key</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>PERSIST</name>
           <description>leave the minikube service in place</description>
