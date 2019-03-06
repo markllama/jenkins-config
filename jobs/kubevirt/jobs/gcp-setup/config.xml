@@ -49,6 +49,24 @@
           <defaultValue>gcp-kubevirt-io-testing</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_ZONE</name>
+          <description>Where to create the new instance</description>
+          <defaultValue>us-central1-b</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_USERNAME</name>
+          <description>The username to log into the VM instance</description>
+          <defaultValue>centos</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_PUBLIC_KEY_NAME</name>
+          <description>The name of the Jenkins credentials containing the instance public key string</description>
+          <defaultValue>centos-public-key</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>PERSIST</name>
           <description>leave the minikube service in place</description>
