@@ -28,7 +28,7 @@
         <hudson.model.StringParameterDefinition>
           <name>TARGET_NODE</name>
           <description>Jenkins agent node</description>
-          <defaultValue>awscli</defaultValue>
+          <defaultValue>gcloud</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
