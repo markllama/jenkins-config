@@ -1,5 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job@2.31">
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -7,6 +8,82 @@
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>5</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>TARGET_NODE</name>
+          <description>Jenkins agent node</description>
+          <defaultValue>gcloud</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_PROJECT</name>
+          <description>The project ID for the GCP service account</description>
+          <defaultValue>cnvlab-209908</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_SERVICE_ACCOUNT</name>
+          <description>The account ID (email) of the GCP service account</description>
+          <defaultValue>kubevirt-io-testing@cnvlab-209908.iam.gserviceaccount.com</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_KEY_FILE</name>
+          <description>The credential ID for the GCP service account key file</description>
+          <defaultValue>gcp-kubevirt-io-testing</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_ZONE</name>
+          <description>Where to create the new instance</description>
+          <defaultValue>us-central1-b</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_INSTANCE_NAME</name>
+          <description>The username to log into the VM instance</description>
+          <defaultValue>kubevirt-demo-test</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_INSTANCE_USERNAME</name>
+          <description>The username to log into the VM instance</description>
+          <defaultValue>centos</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_INSTANCE_PUBLIC_KEY_NAME</name>
+          <description>The name of the Jenkins credentials containing the instance public key string</description>
+          <defaultValue>centos-public-key</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GCP_INSTANCE_PRIVATE_KEY_NAME</name>
+          <description>The name of the Jenkins credentials containing the instance public key string</description>
+          <defaultValue>centos-private-key</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PERSIST</name>
+          <description>leave the minikube service in place</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>DEBUG</name>
+          <description>ask commands to print details</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.63">
     <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.3">
