@@ -70,7 +70,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>_tests/images/aws-teardown.Jenkinsfile</scriptPath>
+    <scriptPath>jobs/aws-teardown.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
