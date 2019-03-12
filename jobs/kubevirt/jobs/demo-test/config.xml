@@ -66,17 +66,27 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>INSTANCE_SSH_PRIVATE_KEY</name>
-          <description>Name of the SSH credentials for instance</description>
-          <defaultValue>kubevirt-demos-ssh</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
           <name>INSTANCE_SSH_USERNAME</name>
           <description>The username for SSH to the instance</description>
           <defaultValue>centos</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_SSH_PRIVATE_KEY</name>
+          <description>Name of the SSH credentials for instance</description>
+          <defaultValue>kubevirt-demos-ssh</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PERSIST</name>
+          <description>leave the minikube service in place</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>DEBUG</name>
+          <description>ask commands to print details</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
