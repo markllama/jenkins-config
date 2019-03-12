@@ -110,7 +110,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>_tests/images/gcp-instance.Jenkinsfile</scriptPath>
+    <scriptPath>jobs/gcp-instance.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
