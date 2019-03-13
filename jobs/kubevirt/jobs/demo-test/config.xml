@@ -39,7 +39,7 @@
         <hudson.model.StringParameterDefinition>
           <name>DEMO_GIT_REPO</name>
           <description>Where to find the demo page and test code</description>
-          <defaultValue>https://github.com:kubevirt.github.io.git</defaultValue>
+          <defaultValue>https://github.com/kubevirt/kubevirt.github.io.git</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
