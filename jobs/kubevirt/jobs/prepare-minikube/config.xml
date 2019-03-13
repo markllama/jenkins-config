@@ -111,7 +111,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>minikube/minikube-setupJenkinsfile</scriptPath>
+    <scriptPath>minikube/minikube-setup.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
