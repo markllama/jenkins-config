@@ -110,7 +110,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>minishift/prep-minishift.Jenkinsfile</scriptPath>
+    <scriptPath>minishift/minishift-setup.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
