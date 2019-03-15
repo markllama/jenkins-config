@@ -11,6 +11,11 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
@@ -19,10 +24,6 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
@@ -34,7 +35,6 @@
         <hudson.model.StringParameterDefinition>
           <name>OWNER_NUMBER</name>
           <description>AWS Owner number</description>
-          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -76,7 +76,7 @@
         <hudson.model.StringParameterDefinition>
           <name>DEMO_GIT_REPO</name>
           <description>Where to find the demo page and test code</description>
-          <defaultValue>https://github.com:kubevirt.github.io.git</defaultValue>
+          <defaultValue>https://github.com/kubevirt/kubevirt.github.io.git</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -89,6 +89,18 @@
           <name>DEMO_ROOT</name>
           <description>The directory that contains the demo tests</description>
           <defaultValue>_includes/scriptlets</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NOTIFY_EMAIL_PASS</name>
+          <description>A comma separated list of email addressed to notify on success</description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NOTIFY_EMAIL_FAIL</name>
+          <description>A comma separated list of email addressed to notify on failure</description>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
