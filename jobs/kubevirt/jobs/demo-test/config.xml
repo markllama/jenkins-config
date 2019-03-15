@@ -3,6 +3,7 @@
   <actions>
     <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.21">
       <jobPropertyDescriptors>
+        <string>org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty</string>
         <string>hudson.model.ParametersDefinitionProperty</string>
         <string>jenkins.model.BuildDiscarderProperty</string>
       </jobPropertyDescriptors>
