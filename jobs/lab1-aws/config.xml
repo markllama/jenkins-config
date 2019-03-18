@@ -28,6 +28,24 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_KEYPAIR_NAME</name>
+          <description>AWS SSH Keypair Name</description>
+          <defaultValue>kubevirt-demos-ssh-name</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_SSH_PRIVATE_KEY</name>
+          <description>Name of the SSH credentials for AWS instance</description>
+          <defaultValue>kubevirt-demos-ssh</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>INSTANCE_SSH_USERNAME</name>
+          <description>The username for SSH to the instance</description>
+          <defaultValue>centos</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>DEMO_NAME</name>
           <description>The username for SSH to the instance</description>
           <defaultValue>lab1</defaultValue>
