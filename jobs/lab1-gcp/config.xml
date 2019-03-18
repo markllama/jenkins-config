@@ -27,7 +27,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>jobs/scheduled/lab1-gcpJenkinsfile</scriptPath>
+    <scriptPath>jobs/scheduled/lab1-gcp.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
