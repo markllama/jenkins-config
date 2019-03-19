@@ -28,6 +28,12 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
+          <name>TARGET_NODE</name>
+          <description>Jenkins agent node</description>
+          <defaultValue>awscli</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
           <name>DEMO_NAME</name>
           <description>The username for SSH to the instance</description>
           <defaultValue>lab1</defaultValue>
