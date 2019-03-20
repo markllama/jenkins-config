@@ -85,13 +85,13 @@
         <hudson.model.StringParameterDefinition>
           <name>NOTIFY_EMAIL_PASS</name>
           <description>A comma separated list of email addressed to notify on success</description>
-          <defaultValue>mlamouri+jenkins-pass@redhat.com,gsharma@redhat.com</defaultValue>
+          <defaultValue>mlamouri@redhat.com,gsharma@redhat.com</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>NOTIFY_EMAIL_FAIL</name>
           <description>A comma separated list of email addressed to notify on failure</description>
-          <defaultValue>mlamouri+jenkins-fail@redhat.com,gsharma@redhat.com</defaultValue>
+          <defaultValue>mlamouri@redhat.com,gsharma@redhat.com</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
