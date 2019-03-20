@@ -107,9 +107,9 @@
           <string>AWS_OWNER_NUMBER</string>
           <string>939345161466</string>
           <string>DEFAULT_NOTIFY_EMAIL_FAIL</string>
-          <string>mlamouri+jenkins-fail@redhat.com</string>
+          <string>mlamouri+jenkins-fail@redhat.com,gsharma@redhat.com</string>
           <string>DEFAULT_NOTIFY_EMAIL_PASS</string>
-          <string>mlamouri+jenkins-pass@redhat.com</string>
+          <string>mlamouri+jenkins-pass@redhat.com,gsharma@redhat.com</string>
         </tree-map>
       </envVars>
     </hudson.slaves.EnvironmentVariablesNodeProperty>
