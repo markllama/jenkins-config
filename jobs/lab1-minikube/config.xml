@@ -26,7 +26,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>jobs/scheduled/minikube-lab1.Jenkinsfile</scriptPath>
+    <scriptPath>jobs/scheduled/lab1-minikube.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
