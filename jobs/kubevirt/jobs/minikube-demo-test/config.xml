@@ -68,6 +68,11 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>START_MINIKUBE</name>
+          <description>start minikube after installing</description>
+          <defaultValue>true</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VIRT_DRIVER_VERSION</name>
           <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
