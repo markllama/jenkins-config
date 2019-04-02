@@ -64,7 +64,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MINISHIFT_VERSION</name>
           <description>What version of minishift to use (no v prefix!)</description>
-          <defaultValue>1.28.0</defaultValue>
+          <defaultValue>1.33.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -77,6 +77,12 @@
           <name>KUBEVIRT_VERSION</name>
           <description>Version of kubevirt to install (or &apos;none&apos;)</description>
           <defaultValue>none</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>OPENSHIFT_VERSION</name>
+          <description>What version of open to use (no v prefix!)</description>
+          <defaultValue>3.11.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
