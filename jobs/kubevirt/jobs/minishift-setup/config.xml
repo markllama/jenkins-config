@@ -85,18 +85,6 @@
           <defaultValue>3.11.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>NOTIFY_EMAIL_PASS</name>
-          <description>A comma separated list of email addressed to notify on success</description>
-          <defaultValue></defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>NOTIFY_EMAIL_FAIL</name>
-          <description>A comma separated list of email addressed to notify on failure</description>
-          <defaultValue></defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>PERSIST</name>
           <description>leave the minishift service in place</description>
