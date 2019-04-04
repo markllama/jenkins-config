@@ -51,6 +51,16 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>VIRT_DRIVER</name>
+          <description>Which virtualization driver to use</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>kvm</string>
+              <string>virtualbox</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MINISHIFT_VERSION</name>
           <description>What version of minishift to use (no v prefix!)</description>
@@ -58,27 +68,11 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>OPENSHIFT_VERSION</name>
-          <description>Version of openshift to install (or &apos;none&apos;)</description>
-          <defaultValue>3.11.0</defaultValue>
+          <name>MINISHIFT_GITHUB_API_TOKEN</name>
+          <description>A Github API access token</description>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
-          <name>VIRT_DRIVER</name>
-          <description>Which virtualization driver to use</description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>kvm2</string>
-              <string>kvm</string>
-              <string>virtualbox</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.BooleanParameterDefinition>
-          <name>START_MINISHIFT</name>
-          <description>start minishiftafter installing</description>
-          <defaultValue>true</defaultValue>
-        </hudson.model.BooleanParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>KUBEVIRT_VERSION</name>
           <description>Version of kubevirt to install (or &apos;none&apos;)</description>
@@ -86,44 +80,14 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>DEMO_NAME</name>
-          <description>The username for SSH to the instance</description>
-          <defaultValue>lab1</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>DEMO_GIT_REPO</name>
-          <description>Where to find the demo page and test code</description>
-          <defaultValue>https://github.com/markllama/kubevirt.github.io.git</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>DEMO_GIT_BRANCH</name>
-          <description>The branch that contains the of the demo to run</description>
-          <defaultValue>labs</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>DEMO_ROOT</name>
-          <description>The directory that contains the demo tests</description>
-          <defaultValue>_includes/scriptlets</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>NOTIFY_EMAIL_PASS</name>
-          <description>A comma separated list of email addressed to notify on success</description>
-          <defaultValue></defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>NOTIFY_EMAIL_FAIL</name>
-          <description>A comma separated list of email addressed to notify on failure</description>
-          <defaultValue></defaultValue>
+          <name>OPENSHIFT_VERSION</name>
+          <description>What version of open to use (no v prefix!)</description>
+          <defaultValue>3.11.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>PERSIST</name>
-          <description>leave the minikube service in place</description>
+          <description>leave the minishift service in place</description>
           <defaultValue>false</defaultValue>
         </hudson.model.BooleanParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
@@ -133,6 +97,7 @@
         </hudson.model.BooleanParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.64">
     <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.3">
