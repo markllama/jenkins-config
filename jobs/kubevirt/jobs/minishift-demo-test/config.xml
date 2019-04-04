@@ -12,6 +12,10 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>5</daysToKeep>
@@ -21,10 +25,6 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
     <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
@@ -57,6 +57,12 @@
           <defaultValue>1.33.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>OPENSHIFT_VERSION</name>
+          <description>Version of openshift to install (or &apos;none&apos;)</description>
+          <defaultValue>3.11.0</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>VIRT_DRIVER</name>
           <description>Which virtualization driver to use</description>
@@ -70,15 +76,9 @@
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>START_MINISHIFT</name>
-          <description>start minikube after installing</description>
-          <defaultValue>false</defaultValue>
+          <description>start minishiftafter installing</description>
+          <defaultValue>true</defaultValue>
         </hudson.model.BooleanParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>OPENSHIFT_VERSION</name>
-          <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
-          <defaultValue>3.11.0</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>KUBEVIRT_VERSION</name>
           <description>Version of kubevirt to install (or &apos;none&apos;)</description>
