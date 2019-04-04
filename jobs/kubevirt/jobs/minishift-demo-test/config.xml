@@ -12,10 +12,6 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>5</daysToKeep>
@@ -25,6 +21,10 @@
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
     <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
@@ -52,9 +52,9 @@
           </choices>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>MINIKUBE_VERSION</name>
-          <description>What version of minikube to use (no v prefix!)</description>
-          <defaultValue>1.0.0</defaultValue>
+          <name>MINISHIFT_VERSION</name>
+          <description>What version of minishift to use (no v prefix!)</description>
+          <defaultValue>1.33.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -69,14 +69,14 @@
           </choices>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
-          <name>START_MINIKUBE</name>
+          <name>START_MINISHIFT</name>
           <description>start minikube after installing</description>
-          <defaultValue>true</defaultValue>
+          <defaultValue>false</defaultValue>
         </hudson.model.BooleanParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>VIRT_DRIVER_VERSION</name>
+          <name>OPENSHIFT_VERSION</name>
           <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
-          <defaultValue>default</defaultValue>
+          <defaultValue>3.11.0</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -151,7 +151,7 @@
       <submoduleCfg class="list"/>
       <extensions/>
     </scm>
-    <scriptPath>jobs/minikube-demo-test.Jenkinsfile</scriptPath>
+    <scriptPath>jobs/minishift-demo-test.Jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
