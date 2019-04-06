@@ -43,7 +43,7 @@
         <hudson.model.StringParameterDefinition>
           <name>MINIKUBE_VERSION</name>
           <description>What version of minikube to use (no v prefix!)</description>
-          <defaultValue>1.0.0</defaultValue>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
@@ -60,13 +60,13 @@
         <hudson.model.StringParameterDefinition>
           <name>VIRT_DRIVER_VERSION</name>
           <description>What version of kvm driver to use (no v prefix!): defaults to MINIKUBE_VERSION</description>
-          <defaultValue>1.0.0</defaultValue>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>KUBEVIRT_VERSION</name>
           <description>Version of kubevirt to install (or &apos;none&apos;)</description>
-          <defaultValue>0.15.0</defaultValue>
+          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
