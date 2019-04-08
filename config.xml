@@ -108,7 +108,7 @@
           <string>939345161466</string>
           <string>CURRENT_KUBEVIRT_VERSION</string>
           <string>0.16.0</string>
-          <string>CURRENT_MIINKUBE_VERSION</string>
+          <string>CURRENT_MIINIKUBE_VERSION</string>
           <string>1.0.0</string>
           <string>CURRENT_MINISHIFT_VERSION</string>
           <string>1.33.0</string>
