@@ -72,7 +72,7 @@
         <hudson.model.StringParameterDefinition>
           <name>DEMO_NAME</name>
           <description>The name of the demo to run</description>
-          <defaultValue></defaultValue>
+          <defaultValue>lab2</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
@@ -84,7 +84,7 @@
         <hudson.model.StringParameterDefinition>
           <name>DEMO_GIT_BRANCH</name>
           <description>The branch that contains the of the demo to run</description>
-          <defaultValue>labs</defaultValue>
+          <defaultValue>master</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
