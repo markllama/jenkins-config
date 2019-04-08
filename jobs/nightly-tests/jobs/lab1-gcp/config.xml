@@ -49,13 +49,13 @@
         <hudson.model.StringParameterDefinition>
           <name>DEMO_GIT_REPO</name>
           <description>Where to find the demo page and test code</description>
-          <defaultValue>https://github.com/markllama/kubevirt.github.io.git</defaultValue>
+          <defaultValue>https://github.com/kubevirt/kubevirt.github.io.git</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>DEMO_GIT_BRANCH</name>
           <description>The branch that contains the of the demo to run</description>
-          <defaultValue>labs</defaultValue>
+          <defaultValue>master</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
