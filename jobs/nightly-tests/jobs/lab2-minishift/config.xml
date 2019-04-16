@@ -50,7 +50,6 @@
           <description>Which virtualization driver to use</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>kvm2</string>
               <string>kvm</string>
               <string>virtualbox</string>
             </a>
